@@ -1,16 +1,16 @@
-# Exercise 2
+# Exercise 2: Loops and Conditional Logic
 
-Here we're going to use some of the more powerful Evidence features.
+Here we're going to use Evidence features to iterate through data, and conditionally choose whether to display content.
 
-## 1. Write a query to get category sales
+## a. Write a query to get category sales
 
-Exercise: Write a query to return the category name and the total sales for that category.
+_Exercise: Write a query to return the category name and the total sales for that category._
 
 <!-- here is some space for your work -->
 
-## 2. Create an `{#each}` loop 
+## b. Create an `{#each}` loop
 
-Exercise: Write a [loop](https://docs.evidence.dev/core-concepts/loops) that displays the category name and the total sales for that category in a list.
+_Exercise: Write a [loop](https://docs.evidence.dev/core-concepts/loops) that displays the category name and the total sales for that category in a list._
 
 
 <Alert status=info>
@@ -29,6 +29,10 @@ Some content and data from rows {row_alias.column_name}
 <!-- here is some space for your work -->
 
 
-## 3. Add an `{#if}` condition to the loop
+## c. Add an `{#if}` condition to the loop
 
-Exercise: Add an [if statement](https://docs.evidence.dev/core-concepts/if-else) inside the loop so that it only displays categories with sales greater than a particular value.
+_Exercise: Add an [if statement](https://docs.evidence.dev/core-concepts/if-else) inside the loop so that it only displays categories with sales greater than a particular value._
+
+When you're done, move onto [Exercise 3](/exercise-3).
+
+<BigLink href="/exercise-3" class="w-7">Exercise 3 &rarr;</BigLink>
