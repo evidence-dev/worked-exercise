@@ -50,7 +50,7 @@ Do this by filtering data before you pass it to a component.
 <Alert status="info">
 
 **Hint:** If you wanted to filter a particular customer, you would use: 
-```javascript
-data={customers.filter(d => d.customer_name === $page.params.customer)}
+```code
+where customer_name = '${params.customer}'
 ```
 </Alert>
