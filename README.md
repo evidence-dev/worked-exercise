@@ -1,3 +1,12 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/evidence-dev/media-kit/332f8e28d7f09927bec10c601b3d4a23efbc2657/svg/wordmark-white.svg">
+  <img alt="Evidence Logo" src="https://raw.githubusercontent.com/evidence-dev/media-kit/332f8e28d7f09927bec10c601b3d4a23efbc2657/svg/wordmark-gray-800.svg">
+</picture>
+
+# Worked Exercise
+
+This repo contains a worked exercise to help you get familiar with Evidence's core features.
+
 ## Getting Started
 
 1. Install the [Evidence VSCode extension](https://marketplace.visualstudio.com/items?itemName=Evidence.evidence-vscode)
