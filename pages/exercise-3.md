@@ -1,25 +1,38 @@
-# Exercise 3: Templated Pages
+# Exercise 3: Loops and Conditional Logic
 
-Templated pages allow you to generate many pages from a single markdown file.
+Here we're going to use Evidence features to iterate through data, and conditionally choose whether to display content.
 
-Each page has a different URL, but the same structure. The URL you use determines which content is displayed.
+## a. Write a query to get category sales
 
-## a. Create a `queries` folder
+_Exercise: Write a query to return the category name and the total sales for that category._
 
-_Exercise: Create a `queries` folder in the root of your project._
+<!-- here is some space for your work -->
 
-This stores queries that you can access in all your markdown files. Each file is named `query_name.sql`.
+## b. Create an `{#each}` loop
 
-## b. Write a query returning one row for each pages you want to create
+_Exercise: Write a [loop](https://docs.evidence.dev/core-concepts/loops) that displays the category name and the total sales for that category in a list._
 
-_Exercise: Write a query and save it in the `/queries` folder._
 
-## c. Run the `Evidence: Create Templated Page from Query` command
+<Alert status=info>
 
-_Exercise: Write a query and save it in the `/queries` folder._
+**Hint:** The syntax for loops is
 
-This scaffolds out a new folder for you with an index page, and a templated page. Once you've made it, go to the index page and test the links in the table.
+```html
+{#each query_name as row_alias}
+    
+Some content and data from rows {row_alias.column_name} 
 
-## d. Customize the Content on your Templated Page
+{/each}
+```
+</Alert>
 
-_Exercise: Add a metric or measure for the specific entity the page represents._
+<!-- here is some space for your work -->
+
+
+## c. Add an `{#if}` condition to the loop
+
+_Exercise: Add an [if statement](https://docs.evidence.dev/core-concepts/if-else) inside the loop so that it only displays categories with sales greater than a particular value._
+
+When you're done, move onto [Exercise 4](/exercise-4).
+
+<BigLink href="/exercise-4" class="w-7">Exercise 4 &rarr;</BigLink>

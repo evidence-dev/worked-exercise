@@ -1,38 +1,54 @@
-# Exercise 2: Loops and Conditional Logic
+# Exercise 2: Using Inputs
 
-Here we're going to use Evidence features to iterate through data, and conditionally choose whether to display content.
+Here we're going to use a dropdown input to filter a chart by category.
 
-## a. Write a query to get category sales
+```sql categories
+select category
+from needful_things.orders
+group by category
+```
 
-_Exercise: Write a query to return the category name and the total sales for that category._
+<Dropdown 
+    name=category_picker
+    data={categories} 
+    value=category
+/>
 
-<!-- here is some space for your work -->
+```sql category_sales_over_time
+select
+    date_trunc('month', order_datetime) as month,
+    category,
+    sum(sales) as total_sales
+from needful_things.orders
+group by all
+order by month, total_sales
+```
 
-## b. Create an `{#each}` loop
+## a. Create a chart
 
-_Exercise: Write a [loop](https://docs.evidence.dev/core-concepts/loops) that displays the category name and the total sales for that category in a list._
-
+_Exercise: Create a BarChart that shows the total sales for each category over time._
 
 <Alert status=info>
 
-**Hint:** The syntax for loops is
-
-```html
-{#each query_name as row_alias}
-    
-Some content and data from rows {row_alias.column_name} 
-
-{/each}
-```
+**Hint:** Use a slash command to get started. See the [BarChart docs](https://docs.evidence.dev/components/bar-chart) for more info.
 </Alert>
 
 <!-- here is some space for your work -->
 
 
-## c. Add an `{#if}` condition to the loop
+## b. Filter the chart using the dropdown input
 
-_Exercise: Add an [if statement](https://docs.evidence.dev/core-concepts/if-else) inside the loop so that it only displays categories with sales greater than a particular value._
+_Exercise: Edit the `category_sales_over_time` query so the chart only displays data for the selected category._
 
-When you're done, move onto [Exercise 3](/exercise-3).
+<Alert status=info>
 
-<BigLink href="/exercise-3" class="w-7">Exercise 3 &rarr;</BigLink>
+**Hint:** 
+
+- Use the `category_picker` input in the  query as `'${inputs.category_picker.value}'`.
+- See the [Dropdown docs](https://docs.evidence.dev/components/dropdown/#filtering-a-query) for more info.
+
+</Alert>
+
+When you're done, move onto [Exercise 3](/exercise-3). 
+
+<BigLink href="/exercise-3">Exercise 3 &rarr;</BigLink>

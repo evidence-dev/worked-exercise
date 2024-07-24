@@ -21,6 +21,11 @@ from information_schema.columns
 
 _Exercise: Query the `orders` table, and return the results in a [DataTable component](https://docs.evidence.dev/components/data-table)._
 
+<Alert status="info">
+
+**Hint:** Try typing `/SQL` and pressing Tab to insert a query using slash command.
+</Alert>
+
 <!-- here is some space for your work -->
 
 ## b. Perform a calculation in SQL
@@ -29,7 +34,7 @@ _Exercise: Find the average order value across all orders._
 
 <Alert status="info">
 
-**Hint:** The column you want is called `sales`
+**Hint:** The column you want is called `sales`.
 </Alert>
 
 <!-- here is some space for your work -->
